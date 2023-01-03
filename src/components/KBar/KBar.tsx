@@ -50,7 +50,7 @@ const KBar = (props: KBarProps) => {
             <div className='flex flex-col'>
               <div>Copied</div>
               <div className='text-sm text-accent-5'>
-                You can now share it with anyone.
+                Silahkan share ke sosmed mu 😆
               </div>
             </div>
           )
@@ -67,7 +67,7 @@ const KBar = (props: KBarProps) => {
       keywords: 'source code github',
       section: 'General',
       perform: () =>
-        window.open('https://github.com/tszhong0411/honghong.me', '_blank'),
+        window.open('https://github.com/ichsanputr/ichsandev.com', '_blank'),
       icon: <IconCode />,
     },
     {
@@ -91,24 +91,15 @@ const KBar = (props: KBarProps) => {
       name: 'GitHub',
       keywords: 'github',
       section: 'Social',
-      perform: () => window.open('https://github.com/tszhong0411', '_blank'),
+      perform: () => window.open('https://github.com/ichsanputr', '_blank'),
       icon: <IconBrandGithub />,
-    },
-    {
-      id: 'instagram',
-      name: 'Instagram',
-      keywords: 'ig instagram',
-      section: 'Social',
-      perform: () =>
-        window.open('https://instagram.com/tszhong0411/', '_blank'),
-      icon: <IconBrandInstagram />,
     },
     {
       id: 'youtube',
       name: 'YouTube',
       keywords: 'yt youtube',
       section: 'Social',
-      perform: () => window.open('https://youtube.com/@tszhong0411', '_blank'),
+      perform: () => window.open('https://www.youtube.com/channel/UClUtIblK_TBgD6LZ1_7rvig', '_blank'),
       icon: <IconBrandYoutube />,
     },
     {
@@ -117,7 +108,7 @@ const KBar = (props: KBarProps) => {
       keywords: 'fb facebook',
       section: 'Social',
       perform: () =>
-        window.open('https://www.facebook.com/tszhonglai.0411/', '_blank'),
+        window.open('https://www.facebook.com/ichsanputr/', '_blank'),
       icon: <IconBrandFacebook />,
     },
   ]

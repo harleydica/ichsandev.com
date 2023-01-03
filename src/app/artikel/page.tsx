@@ -18,7 +18,7 @@ const BlogPage = () => {
   return (
     <>
       <div className='mb-8 space-y-8'>
-        <h2 className='my-4 text-4xl font-bold'>Blog</h2>
+        <h2 className='my-4 text-4xl font-bold'>Semua Artikel 📋</h2>
         <p className='text-accent-5'>
           I started writing articles in December 2020, mainly for software
           sharing and skills sharing. In total, I have written {posts.length}{' '}
@@ -29,7 +29,7 @@ const BlogPage = () => {
             type='text'
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            placeholder='Search articles'
+            placeholder='Cari Artikel'
             aria-label='Search articles'
             className='w-full rounded-md border border-accent-2 bg-hong-bg py-2 px-3 pl-12 transition-colors duration-200 ease-linear focus:border-accent-5 focus:outline-none'
             id='search'

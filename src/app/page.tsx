@@ -5,7 +5,7 @@ import Hero from '@/components/Home/Hero'
 
 const HomePage = () => {
   const posts = getAllPosts({
-    limit: 4,
+    limit: 6,
   })
 
   return (

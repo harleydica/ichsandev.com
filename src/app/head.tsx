@@ -1,7 +1,7 @@
 import Head from '@/components/Head'
 
 const RootHead = () => {
-  return <Head title='Home' />
+  return <Head title='All about Programming' />
 }
 
 export default RootHead
