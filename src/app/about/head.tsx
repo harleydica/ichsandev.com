@@ -2,7 +2,7 @@ import Head from '@/components/Head'
 
 const AboutHead = () => {
   return (
-    <Head title='About' description='A student who loves web development.' />
+    <Head title='About Me' description='Muhammad Ichsan Belajar Pemrograman itu Menyenangkan :)' />
   )
 }
 

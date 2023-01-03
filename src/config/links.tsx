@@ -23,29 +23,9 @@ export const HEADER_LINKS: DropdownItemType[] = [
     text: 'Blog',
   },
   {
-    icon: <IconMessageCircle />,
-    href: '/guestbook',
-    text: 'Guestbook',
-  },
-  {
-    icon: <IconChartBar />,
-    href: '/dashboard',
-    text: 'Dashboard',
-  },
-  {
-    icon: <IconFlame />,
-    href: '/projects',
-    text: 'Projects',
-  },
-  {
     icon: <IconUserCircle />,
     href: '/about',
     text: 'About',
-  },
-  {
-    icon: <IconDeviceDesktop />,
-    href: '/uses',
-    text: 'Uses',
   },
 ]
 
@@ -93,19 +73,15 @@ export const FOOTER_LINKS: FooterLinks = [
   {
     links: [
       {
-        href: 'https://www.facebook.com/tszhonglai.0411/',
+        href: 'https://www.facebook.com/ichsanputr/',
         title: 'Facebook',
       },
       {
-        href: 'https://www.instagram.com/tszhong0411/',
-        title: 'Instagram',
-      },
-      {
-        href: 'https://github.com/tszHong0411',
+        href: 'https://github.com/ichsanputr',
         title: 'GitHub',
       },
       {
-        href: 'https://www.youtube.com/@tszhong0411',
+        href: 'https://www.youtube.com/channel/UClUtIblK_TBgD6LZ1_7rvig',
         title: 'YouTube',
       },
     ],

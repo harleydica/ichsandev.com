@@ -1,14 +1,14 @@
 import { GiscusProps } from '@giscus/react'
 
 export const GISCUS_CONFIG: GiscusProps = {
-  repo: 'tszhong0411/honghong.me',
-  repoId: 'R_kgDOGxHFnA',
-  category: 'Blog Comments',
-  categoryId: 'DIC_kwDOGxHFnM4CBGIQ',
+  repo: 'ichsanputr/ichsandev.com',
+  repoId: 'R_kgDOItjYbg',
+  category: 'General',
+  categoryId: 'DIC_kwDOItjYbs4CTYVJ',
   mapping: 'pathname',
   reactionsEnabled: '1',
-  emitMetadata: '1',
+  emitMetadata: '0',
   inputPosition: 'bottom',
-  lang: 'en',
+  lang: 'id',
   loading: 'eager',
 }
