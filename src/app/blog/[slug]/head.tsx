@@ -27,15 +27,15 @@ const BlogPostHead = (props: BlogPostHeadProps) => {
       openGraph={{
         description: summary,
         type: 'article',
-        title: `${title} | 小康 Blog`,
+        title: `${title} | IchsanDev`,
         article: {
           publishedTime: ISOPublishedTime,
           modifiedTime: ISOModifiedTime,
-          authors: ['https://honghong.me'],
+          authors: ['https://ichsandev.com'],
         },
         images: [
           {
-            url: `https://honghong.me/api/og?title=${title}&date=${date}`,
+            url: `https://ichsandev.com/api/og?title=${title}&date=${date}`,
             alt: title,
             width: 1200,
             height: 630,

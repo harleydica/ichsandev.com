@@ -27,7 +27,7 @@ const Footer = () => {
         ))}
       </div>
       <div className='mt-20 text-sm'>
-        &copy; {new Date().getFullYear()} IchsanDev
+        &copy; {new Date().getFullYear()} made with ❤️ IchsanDev
       </div>
     </footer>
   )

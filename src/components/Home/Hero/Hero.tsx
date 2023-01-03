@@ -10,7 +10,7 @@ const Hero = () => {
         <div className='space-y-4 md:max-w-lg'>
           <h1 className='text-4xl font-bold text-hong-fg'>小康</h1>
           <h2 className='text-lg font-medium text-accent-5'>
-            16 yrs • Student • Full-stack Web Development Student
+            Semua tentang pemrograman android, website, backend, cloud clomputing, dan devops ada disini 😉
           </h2>
           <p className='text-lg'>
             I am a student, currently learning web development skills such as
@@ -23,7 +23,7 @@ const Hero = () => {
             src='/static/images/avatar.png'
             width={112}
             height={112}
-            alt='小康'
+            alt='ichsandev'
             rounded='rounded-full'
             loading='eager'
             priority

@@ -21,24 +21,24 @@ const Head = (props: HeadProps) => {
       <meta name='viewport' content='width=device-width' />
       <NextSeo
         useAppDir
-        titleTemplate='%s - 小康'
+        titleTemplate='%s - IchsanDev'
         title={title}
-        defaultTitle='小康'
+        defaultTitle='IchsanDev'
         description={description}
-        canonical={`https://honghong.me${pathname}`}
+        canonical={`https://ichsandev.com${pathname}`}
         twitter={{
           cardType: 'summary_large_image',
           site: '@TszhongLai0411',
           handle: '@TszhongLai0411',
         }}
         openGraph={{
-          url: `https://honghong.me${pathname}`,
+          url: `https://ichsandev.com${pathname}`,
           type: 'website',
           title: title ?? '小康',
           description,
           images: [
             {
-              url: 'https://honghong.me/static/images/og/og.png',
+              url: 'https://ichsandev.com/static/images/og/og.png',
               width: 1200,
               height: 630,
               alt: '小康 – 16 yrs • Student • Full-stack Web Development Student',

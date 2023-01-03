@@ -36,7 +36,7 @@ export const generateStaticParams = () => {
 }
 
 const editURL = (slug: string) =>
-  `https://github.com/tszhong0411/honghong.me/blob/main/src/content/blog/${slug}.mdx`
+  `https://github.com/ichsanputr/ichsandev.com/blob/main/src/content/blog/${slug}.mdx`
 
 const twitterShareURL = (slug: string, title: string) =>
   `https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(
