@@ -6,7 +6,7 @@ const Logo = (props: React.ComponentPropsWithRef<'svg'>) => {
   const { className } = props
 
   return (
-   <h1>&gt;_ cd /IchsanDev/</h1>
+   <span className="font-bold text-2xl">&gt;_ cd /IchsanDev/</span>
   )
 }
 
