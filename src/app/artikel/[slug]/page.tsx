@@ -79,11 +79,11 @@ const BlogPostPage = (props: BlogPostPageProps) => {
         modifiedTime={ISOModifiedTime}
         description={summary}
         authorName={{
-          name: '小康',
-          url: 'https://honghong.me',
+          name: 'Muhammad Ichsan',
+          url: 'https://ichsandev.com',
         }}
-        publisherLogo='https://honghong.me/static/images/avatar.png'
-        publisherName='小康'
+        publisherLogo='https://ichsandev.com/static/images/avatar.png'
+        publisherName='Muhammad Ichsan'
         type='Article'
         images={[`https://honghong.me/api/og?title=${title}&date=${date}`]}
       />
