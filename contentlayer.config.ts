@@ -96,6 +96,11 @@ export const BlogPost = defineDocumentType(() => ({
       description: 'The date of the blog post',
       required: true,
     },
+    tag: {
+      type: 'string',
+      description: 'The tag of the blog post',
+      required: true,
+    },
     modifiedTime: {
       type: 'string',
       description: 'The modified time of the blog post',

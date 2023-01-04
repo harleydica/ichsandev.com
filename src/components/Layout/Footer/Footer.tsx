@@ -3,15 +3,13 @@
 import { isProduction } from '@/lib/constants'
 
 import Link from '@/components/Link'
-import NowPlaying from '@/components/NowPlaying'
 
 import { FOOTER_LINKS } from '@/config/links'
 
 const Footer = () => {
   return (
-    <footer className='mx-auto flex max-w-4xl flex-col px-8 pb-8'>
-      {isProduction && <NowPlaying />}
-      <div className='mt-12 grid grid-cols-6 sm:grid-cols-3'>
+    <footer className='border-solid border-t-2 border-gray-300 mx-auto flex max-w-4xl flex-col px-8 pb-8'>
+      <div className='mt-12 grid grid-cols-2 sm:grid-cols-3'>
         {FOOTER_LINKS.map((list, i) => (
           <div key={i} className='mb-10 flex flex-col items-start gap-4 pr-4'>
             {list.links.map((link, j) => (

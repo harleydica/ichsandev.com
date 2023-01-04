@@ -23,7 +23,7 @@ const BlogPosts = (props: BlogPostsProps) => {
       <div className='flex'>
         <Link
           href='/artikel'
-          className='group my-8 flex items-center gap-2 text-lg font-medium'
+          className='group my-8 flex items-center gap-2 text-base md:text-lg font-medium'
         >
           <span>Lihat semua artikel</span>
           <IconArrowRight className='h-4 w-4 transition duration-200 group-hover:translate-x-1' />

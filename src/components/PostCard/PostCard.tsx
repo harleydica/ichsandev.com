@@ -19,7 +19,7 @@ const PostCard = (props: PostCardProps) => {
   return (
     <Link
       key={_id}
-      href={`/blog/${slug}`}
+      href={`/artikel/${slug}`}
       className='flex flex-col space-y-3 rounded-2xl border border-accent-2 p-6 transition-all duration-300 hover:scale-105 hover:bg-accent-1'
     >
       <Image

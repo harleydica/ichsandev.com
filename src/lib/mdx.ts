@@ -12,7 +12,7 @@ export const getAllPosts = (config: GetAllPostsProps = {}) => {
   const posts = allBlogPosts
     .slice(0, limit)
     .map((post) =>
-      pick(post, ['_id', 'slug', 'title', 'summary', 'date', 'image'])
+      pick(post, ['_id', 'slug', 'title', 'summary', 'date', 'image','tag'])
     )
 
   if (sorted) {
