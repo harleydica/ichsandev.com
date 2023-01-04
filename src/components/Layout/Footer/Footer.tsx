@@ -1,7 +1,5 @@
 'use client'
 
-import { isProduction } from '@/lib/constants'
-
 import Link from '@/components/Link'
 
 import { FOOTER_LINKS } from '@/config/links'
