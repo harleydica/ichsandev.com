@@ -11,6 +11,7 @@ import Footer from '@/components/Layout/Footer'
 import Header from '@/components/Layout/Header'
 
 import Analytics from '../components/Analytics'
+import Script from 'next/script'
 
 import { WithChildren } from '@/types'
 
@@ -57,6 +58,12 @@ const RootLayout = (props: RootLayoutProps) => {
             <Footer />
           </KBar>
         </ThemeProvider>
+        <Script
+          async
+          defer
+          data-website-id="72ba89c8-3791-479b-b16b-e929f034b309"
+          src="https://umami.taufikcrisnawan.dev/umami.js"
+        />
         <Analytics />
       </body>
     </html>

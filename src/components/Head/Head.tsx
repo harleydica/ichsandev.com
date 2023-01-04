@@ -19,7 +19,6 @@ const Head = (props: HeadProps) => {
     <>
       <meta charSet='utf-8' />
       <meta name='viewport' content='width=device-width' />
-      <script async defer data-website-id="72ba89c8-3791-479b-b16b-e929f034b309" src="https://umami.taufikcrisnawan.dev/umami.js"></script>
       <NextSeo
         useAppDir
         titleTemplate='%s - IchsanDev'
