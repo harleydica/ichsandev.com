@@ -102,7 +102,6 @@ const BlogPostPage = (props: BlogPostPageProps) => {
         <article className='w-full lg:w-[540px]'>
         <span className="inline-flex items-center justify-center my-4 py-1 px-1.5 rounded text-xs md:text-sm font-medium text-fuchsia-700 bg-fuchsia-100 dark:text-fuchsia-100 dark:bg-fuchsia-800">{tag}</span>
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-2"><IconCalendar size={18} /><time class="text-sm md:text-base" datetime="2022-11-11T16:00:00.000Z">{formattedDate}</time></div>
         </div>
 
         <hr className="my-4"></hr>
