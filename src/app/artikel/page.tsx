@@ -18,11 +18,9 @@ const BlogPage = () => {
   return (
     <>
       <div className='mb-8 space-y-8'>
-        <h2 className='my-4 text-4xl font-bold'>Semua Artikel 📋</h2>
+        <h1 className='my-4 text-3xl font-bold'>Semua Artikel 📋</h1>
         <p className='text-accent-5'>
-          I started writing articles in December 2020, mainly for software
-          sharing and skills sharing. In total, I have written {posts.length}{' '}
-          articles on my blog. You can search by title in the search bar below.
+          {posts.length}{' '} artikel sudah ditulis 🥳, cari artikel yang anda ingin baca dengan memasukkan judulnya di search bar di bawah ini.
         </p>
         <div className='relative'>
           <input

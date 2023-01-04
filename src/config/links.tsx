@@ -9,6 +9,7 @@ import {
   IconFlame,
   IconMessageCircle,
   IconPencil,
+  IconTag,
   IconUserCircle,
 } from '@tabler/icons'
 
@@ -19,8 +20,13 @@ import { FooterLinks } from '@/components/Layout/Footer'
 export const HEADER_LINKS: DropdownItemType[] = [
   {
     icon: <IconPencil />,
-    href: '/blog',
-    text: 'Blog',
+    href: '/artikel',
+    text: 'Artikel',
+  },
+  {
+    icon: <IconTag />,
+    href: '/kategori',
+    text: 'Kategori',
   },
   {
     icon: <IconUserCircle />,
@@ -37,16 +43,12 @@ export const FOOTER_LINKS: FooterLinks = [
         title: 'Home',
       },
       {
-        href: '/blog',
-        title: 'Blog',
+        href: '/artikel',
+        title: 'Artikel',
       },
       {
-        href: '/about',
-        title: 'About',
-      },
-      {
-        href: '/feed.xml',
-        title: 'RSS',
+        href: '/kategori',
+        title: 'Kategori',
       },
     ],
   },
@@ -91,22 +93,18 @@ export const FOOTER_LINKS: FooterLinks = [
 export const HERO_LINKS: HeroLinks = [
   {
     icon: <IconBrandGithub size={28} />,
-    href: 'https://github.com/tszhong0411',
+    href: 'https://github.com/ichsanputr',
   },
   {
     icon: <IconBrandInstagram size={28} />,
-    href: 'https://www.instagram.com/tszhong0411/',
+    href: 'https://www.instagram.com/ichsandev/',
   },
   {
     icon: <IconBrandYoutube size={28} />,
-    href: 'https://www.youtube.com/@tszhong0411',
+    href: 'https://www.youtube.com/channel/UClUtIblK_TBgD6LZ1_7rvig',
   },
   {
     icon: <IconBrandFacebook size={28} />,
-    href: 'https://www.facebook.com/tszhonglai.0411/',
-  },
-  {
-    icon: <IconBrandTwitter size={28} />,
-    href: 'https://twitter.com/TszhongLai0411',
+    href: 'https://www.facebook.com/ichsanputr/',
   },
 ]
