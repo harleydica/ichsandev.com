@@ -1,44 +1,33 @@
-import { IconArrowRight } from '@tabler/icons'
+import { 
+  IconArrowRight,
+  IconSlice,
+  IconBrandFlutter
+} from '@tabler/icons'
 import * as TablerIcon from '@tabler/icons'
 import { allProjects } from 'contentlayer/generated'
 import Link from 'next/link'
 
-const Projects = () => {
+const Tag = () => {
   return (
     <div className='my-16 flex flex-col'>
-      <h2 className='mb-8 text-3xl font-bold'>Projects</h2>
-      <div className='flex flex-col gap-8'>
-        {allProjects.slice(0, 3).map((project) => {
-          const { _id, iconName, name, description, slug } = project
-          const Icon: React.FC<TablerIcon.TablerIconProps> =
-            TablerIcon[iconName]
-
-          return (
-            <Link
-              key={_id}
-              href={`/projects/${slug}`}
-              className='flex w-full flex-1 items-center justify-start rounded-lg border border-accent-2 p-4 transition-all duration-300 hover:scale-105 sm:px-6'
-            >
-              <Icon />
-              <div className='px-4'>
-                <div>{name}</div>
-                <p>{description}</p>
-              </div>
-            </Link>
-          )
-        })}
-      </div>
-      <div className='flex'>
-        <Link
-          href='/projects'
-          className='group my-8 flex items-center gap-4 text-lg font-medium'
-        >
-          <span>View All Projects</span>
-          <IconArrowRight className='h-4 w-4 transition duration-200 group-hover:translate-x-1' />
-        </Link>
+      <div class="flex flex-col gap-8">
+        <a class="flex w-full flex-1 items-center justify-start rounded-lg border border-accent-2 p-4 transition-all duration-300 hover:scale-105 sm:px-6" href="/dart">
+          <IconSlice />
+          <div class="px-4">
+            <div>Pemrograman Dart</div>
+            <p>Bahasa pemrograman dart mulai dari basic, middle, advance seperti async</p>
+          </div>
+        </a>
+        <a class="flex w-full flex-1 items-center justify-start rounded-lg border border-accent-2 p-4 transition-all duration-300 hover:scale-105 sm:px-6" href="/flutter">
+          <IconBrandFlutter />
+          <div class="px-4">
+            <div>Flutter</div>
+            <p>Framework flutter, basic konsep seperti widget dan konsep advance state, getX, dan lainya</p>
+          </div>
+        </a>
       </div>
     </div>
   )
 }
 
-export default Projects
+export default Tag
