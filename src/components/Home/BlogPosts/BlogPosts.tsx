@@ -14,7 +14,7 @@ const BlogPosts = (props: BlogPostsProps) => {
 
   return (
     <>
-      <h2 className='mb-8 text-2xl font-bold'>Artikel Terpopuler 🔥</h2>
+      <h2 className='mb-8 text-xl md:text-2xl font-bold'>Artikel Terpopuler 🔥</h2>
       <div className='grid gap-4 sm:grid-cols-2'>
         {posts.map((post) => (
           <PostCard key={post._id} {...post} />

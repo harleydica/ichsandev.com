@@ -10,7 +10,7 @@ const Hero = () => {
         <div className='space-y-4 md:max-w-lg'>
           <h1 className='text-4xl font-bold text-hong-fg'>IchsanDev 💻</h1>
           <h2 className='text-base md:text-lg font-medium text-accent-5'>
-            Semua tentang pemrograman android, website, backend, cloud computing, dan devops ada disini 😉
+            Semua tentang pemrograman android, website, backend, cloud computing, dan devops dibahas di website ini, temukan artikel menarik yang telah kami tulis, baca lalu praktekan.
           </h2>
         </div>
         <div className='h-20 w-20 md:h-28 md:w-28'>

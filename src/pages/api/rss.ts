@@ -5,12 +5,12 @@ import { getAllPosts } from '@/lib/mdx'
 
 const handler = async (_: NextApiRequest, res: NextApiResponse) => {
   const feed = new RSS({
-    title: '小康 Blog',
-    description: "Hong's personal website and blog",
-    site_url: 'https://honghong.me',
-    feed_url: 'https://honghong.me/feed.xml',
+    title: 'IchsanDev',
+    description: "All about Programming - IchsanDev",
+    site_url: 'https://ichsandev',
+    feed_url: 'https://ichsandev/feed.xml',
     language: 'en',
-    image_url: 'https://honghong.me/static/images/og/og.png',
+    image_url: 'https://ichsandev/static/images/og/og.png',
   })
 
   const allPosts = getAllPosts()
@@ -20,7 +20,7 @@ const handler = async (_: NextApiRequest, res: NextApiResponse) => {
 
     feed.item({
       title: title,
-      url: `https://honghong.me/blog/${slug}`,
+      url: `https://ichsandev/artikel/${slug}`,
       date: date,
       description: summary,
       author: '小康',

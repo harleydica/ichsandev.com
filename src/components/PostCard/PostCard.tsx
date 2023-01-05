@@ -13,13 +13,13 @@ import { BlogPostCore } from '@/types'
 type PostCardProps = BlogPostCore
 
 const PostCard = (props: PostCardProps) => {
-  const { _id, slug, image, title, summary, date } = props
+  const { _id, slug, image, title, summary, date, tag } = props
   const formattedDate = useFormattedDate(date, 'MMM DD, YYYY')
 
   return (
     <Link
       key={_id}
-      href={`/artikel/${slug}`}
+      href={`/${tag}/${slug}`}
       className='flex flex-col space-y-3 rounded-2xl border border-accent-2 p-6 transition-all duration-300 hover:scale-105 hover:bg-accent-1'
     >
       <Image
