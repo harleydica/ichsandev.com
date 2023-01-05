@@ -15,7 +15,6 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import { ArticleJsonLd } from 'next-seo'
 import React from 'react'
 
-import { isProduction } from '@/lib/constants'
 import { useFormattedDate } from '@/hooks'
 
 import Comment from '@/components/Comment'
@@ -92,13 +91,6 @@ const BlogPostPage = (props: BlogPostPageProps) => {
       />
       <h1 className='text-3xl md:text-4xl font-bold'>{title}</h1>
       <div className='flex items-center gap-2'>
-        {isProduction && (
-          <>
-            <ViewCounter type='POST' slug={slug} />
-            <div>/</div>
-            <CommentCounter />
-          </>
-        )}
       </div>
       <div className='mt-2 flex flex-col justify-between lg:flex-row'>
         <article className='w-full lg:w-[540px]'>
@@ -131,7 +123,7 @@ const BlogPostPage = (props: BlogPostPageProps) => {
           </div>
         </article>
         <aside className='lg:min-w-[270px] lg:max-w-[270px]'>
-          <div className='sticky top-24'>
+          <div className='sticky top-24 mt-6'>
             <TableOfContents />
             <LikeButton slug={slug} />
           </div>
