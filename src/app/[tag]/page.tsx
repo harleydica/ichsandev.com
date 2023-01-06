@@ -26,7 +26,7 @@ const TagPage = (props: TagPageProps) => {
       <div className='mb-8 space-y-8'>
         <h1 className='my-4 text-3xl font-bold'>Kategori: {params.tag}</h1>
         <p className='text-accent-5'>
-          {posts.length}{' '} artikel sudah ditulis di kategori {params.tag}{' '} 🥳
+          {filteredPosts.length}{' '} artikel sudah ditulis di kategori {params.tag}{' '} 🥳
         </p>
       </div>
       {!filteredPosts.length && (

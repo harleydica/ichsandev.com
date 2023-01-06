@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider     = "mysql"
-  url          = env("mysql://sql7588444:AV4y79r7Er@sql7.freemysqlhosting.net:3306/mydb")
+  url          = "mysql://sql7588444:AV4y79r7Er@sql7.freemysqlhosting.net:3306/sql7588444"
   relationMode = "prisma"
 }
 
