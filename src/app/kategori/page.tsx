@@ -1,5 +1,4 @@
-import { useMDXComponent } from 'next-contentlayer/hooks'
-import Tag from '@/components/tag'
+import Tag from '@/components/Tag'
 
 const CategoriPage = () => {
   return (
