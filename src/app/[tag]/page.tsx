@@ -1,9 +1,8 @@
 'use client'
 
 import React from 'react'
-
+import { notFound } from 'next/navigation'
 import { getAllPosts } from '@/lib/mdx'
-
 import PostCard from '@/components/PostCard'
 
 type TagPageProps = {
@@ -14,6 +13,10 @@ type TagPageProps = {
 
 const TagPage = (props: TagPageProps) => {
   const { params } = props
+  
+  if(params.tag !== 'dart' && params.tag !== 'windows'){
+    notFound()
+  }
 
   const posts = getAllPosts()
 
