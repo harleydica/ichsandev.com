@@ -1,5 +1,5 @@
 const NotFound = () => {
-  return "Couldn't find requested resource"
+  return "Maaf halaman yang anda tuju tidak ada :("
 }
 
 export default NotFound
