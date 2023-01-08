@@ -107,7 +107,7 @@ const BlogPostPage = (props: BlogPostPageProps) => {
             </div>
             <div className="flex items-center gap-2 text-sm md:text-base">
               <IconEye size={18} />
-              <p>—</p>
+              <ViewCounter type='POST' slug={slug} />
             </div>
           </div>
           <div className="flex items-center gap-2">

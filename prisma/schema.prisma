@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider     = "mysql"
-  url          = "mysql://sql7588444:AV4y79r7Er@sql7.freemysqlhosting.net:3306/sql7588444"
+  url          = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
@@ -15,5 +15,11 @@ model Post {
   slug      String   @unique
   likes     Int      @default(0)
   views     Int      @default(0)
+}
+
+model Session {
+  id        String   @id
+  createdAt DateTime @default(now())
+  likes     Int      @default(0)
 }
 

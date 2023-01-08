@@ -55,21 +55,9 @@ export const FOOTER_LINKS: FooterLinks = [
   {
     links: [
       {
-        href: '/guestbook',
-        title: 'Guestbook',
-      },
-      {
-        href: '/uses',
-        title: 'Uses',
-      },
-      {
-        href: '/projects',
-        title: 'Projects',
-      },
-      {
-        href: '/design',
-        title: 'Design',
-      },
+        href: '/about',
+        title: 'Tentang',
+      }
     ],
   },
   {
