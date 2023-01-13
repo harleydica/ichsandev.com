@@ -22,8 +22,9 @@ const PostCard = (props: PostCardProps) => {
       href={`/${tag}/${slug}`}
       className='flex flex-col space-y-3 rounded-2xl border border-accent-2 p-6 transition-all duration-300 hover:scale-105 hover:bg-accent-1'
     >
+      
       <Image
-        src={`/static/images/blog/${image}`}
+        src={`https://ik.imagekit.io/uvma3bkbp/${image}/?ik-sdk-version=javascript-1.4.3&updatedAt=1673611681571`}
         width={1280}
         height={720}
         alt={title}
