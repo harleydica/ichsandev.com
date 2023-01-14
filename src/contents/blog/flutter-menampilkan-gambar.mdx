@@ -70,4 +70,17 @@ Method network tidak bisa melakukan caching terhadap gambar yang ingin kita tamp
 
 Ada dua cara yang bisa kita terapkan guna mendapatkan kinerja gambar yang lebih cepat yaitu dengan placeholder dan caching.
 
-### Caching Image
+### Placeholder
+
+Placeholder adalah sebuah aksi yang bisa kita berikan kepada tempat dari image yang nantinya akan dijalankan saat gambar sedang didownload. Hal ini pasti sudah sering kita temukan di website-website dimana ada banyak metode untuk placeholder seperti spinner, fade, atau loading yang biasanya berbentuk gif.
+
+Untuk menerapkanya kita bisa memanfaatkan class **FadeInImage.assetNetwork**.
+
+```dart showLineNumbers
+FadeInImage.assetNetwork(
+    placeholder: 'assets/loading.gif',
+    image: 'https://picsum.photos/250?image=2',
+),
+```
+
+![Struktur Protokol UDP](https://ik.imagekit.io/uvma3bkbp/New_Project_2__Nf8G80vPV.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665319224698 'Struktur Protokol UDP')
