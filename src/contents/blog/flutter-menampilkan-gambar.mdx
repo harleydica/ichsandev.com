@@ -83,4 +83,55 @@ FadeInImage.assetNetwork(
 ),
 ```
 
-![Struktur Protokol UDP](https://ik.imagekit.io/uvma3bkbp/New_Project_2__Nf8G80vPV.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665319224698 'Struktur Protokol UDP')
+Hasilnya nanti akan menjadi seperti ini, gif loading akan dijalankan saat proses download gambar berlangsung dan ketika gambar sudah didownload maka gif loading akan berhenti dan gambar akan ditampilkan dengan transisi fade in.
+
+![placeholder gambar flutter](https://ik.imagekit.io/uvma3bkbp/fading-in-asset-demo_2dbljxltJ.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1673667036915 'placeholder gambar flutter')
+
+### Caching
+
+Oke selanjutnya ada caching, sebuah fitur yang sudah sangat lumrah kita dengar, disini saya nggak akan jelasin apa itu caching karena saya yakin anda semuanya udah paham kan hehe.
+
+Untuk melakukan caching gambar kita bisa menggunakan package bernama **cached_network_image** yang masih baru dirilis 2 bulanan dari artikel ini dibuat.
+
+Pertama kita install dan import terlebih dahulu packagenya.
+
+```dart
+import 'package:cached_network_image/cached_network_image.dart';
+```
+
+Selanjutnya tinggal kita pakai
+
+```dart showLineNumbers
+CachedNetworkImage(
+    imageUrl: "http://via.placeholder.com/350x150",
+    placeholder: (context, url) => CircularProgressIndicator(),
+    errorWidget: (context, url, error) => Icon(Icons.error),
+),
+```
+
+Kode di atas akan menampilkan placeholder berupa **CircularProgressIndicator** saat gambar pertama kali di download dan akan menampilkan icon error jika gambar tidak berhasil di download. Nah jika user membuka aplikasi selanjutnya maka gambar otomatis akan di tampilkan dari memori internal aplikasi (nggak di download lagi).
+
+## Menampilkan gambar dari lokal
+
+Berbeda dengan cara pengambilan gambar dari network jika kita menggunakan gambar dari lokal maka kita tidak perlua menambahkan placeholder ataupun cache karena yaa sudah pastt gambar kita akan ditampilkan secara cepat.
+
+Untuk menampilkan gambar secara lokal dengan flutter kita bisa menggunakan class **Image.asset**.
+
+```dart 
+Image.asset('assets/cat.png')
+```
+
+Semua gambar wajib diletakkan di folder asset, dengan struktur folder seperti ini.
+
+<Tree
+  data={[
+    {
+      name: 'assets',
+      children: [{ name: 'image.png' }],
+    },
+    {
+      name: 'lib',
+      children: [{ name: 'main.dart' }],
+    },
+  ]}
+/>
