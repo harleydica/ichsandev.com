@@ -11,13 +11,63 @@ Menampilkan sebuah gambar merupakan hal yang dasar yang wajib kita kuasai saat m
 
 Untuk menampilkan gambar di flutter kita bisa memanfaatkan class **Image** yang telah disediakan oleh flutter secara default guna menampilkan berbagai jenis gambar. Nantinya kita akan belajar untuk menampilkan gambar dari dua sumber yaitu dari internet dan lokal.
 
-Less Go...
+Karena image ini membutuhkan material sebagai pembungkus style maka dari itu kita buat pembungkus style materialnya dengan widget MaterialApp.
+
+```dart showLineNumbers
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  Widget build(BuildContext context) {
+
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Menampilkan Gambar'),
+        ),
+        body: Image Ditampilkan Disini,
+      ),
+    );
+  }
+}
+```
 
 ## Menampilkan gambar dari internet
 
 Untuk menampilkan sebuah gambar dari internet di flutter kita bisa menggunakan method **Network** dengan diikuti url gambarnya sebagai parameter.
 
 ```dart showLineNumbers
-Image.network('https://picsum.photos/250?image=1'),
+Image.network('https://picsum.photos/250?image=1')
 ```
 
+Selain png flutter juga mendukung beberapa jenis gambar lainya seperti, JPEG, PNG, GIF, Animated GIF, WebP, Animated WebP, BMP, dan WBMP.
+
+Contoh untuk GIF
+
+```dart showLineNumbers
+Image.network('https://docs.flutter.dev/assets/images/dash/dash-fainting.gif');
+```
+
+Kita juga bisa mengatur tinggi dan lebar layaknya gambar di html menggunakan properti *width* dan *height*.
+
+```dart showLineNumbers
+Image.network(
+    'https://picsum.photos/250?image=1',
+    width: 100,
+    height: 60
+)
+```
+
+## Placeholder dan Caching
+
+Secara default method **Image.network** tidak memiliki fungsionalitas yang advance, tugas dasarnya ialah mengambil gambar dari internet lalu menampilkanya dan memanipulasikan.
+
+Method network tidak bisa melakukan caching terhadap gambar yang ingin kita tampilkan, sehingga gambar akan di download setiap kali kita membuka layer dan itu akan memakan beban kinerja aplikasi nantinya.
+
+Ada dua cara yang bisa kita terapkan guna mendapatkan kinerja gambar yang lebih cepat yaitu dengan placeholder dan caching.
+
+### Caching Image
