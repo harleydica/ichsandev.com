@@ -1,0 +1,23 @@
+---
+title: Belajar Flutter - Menampilkan Gambar
+date: '2023-01-13T00:00:00Z'
+modifiedTime: '2023-08-13T00:00:00Z'
+summary: Dart mempunyai 4 tipe data yang nantinya akan sering kita pakai, yaitu String, Integer, List dan Boolean mari kita bahas bersama.
+image: 'flutter-menampilkan-gambar'
+tag: flutter
+---
+
+Menampilkan sebuah gambar merupakan hal yang dasar yang wajib kita kuasai saat membangun sebuah aplikasi, bayangkan saja sebuah aplikasi tanpa adanya visual gambar? wkwk pasti hambar. 
+
+Untuk menampilkan gambar di flutter kita bisa memanfaatkan class **Image** yang telah disediakan oleh flutter secara default guna menampilkan berbagai jenis gambar. Nantinya kita akan belajar untuk menampilkan gambar dari dua sumber yaitu dari internet dan lokal.
+
+Less Go...
+
+## Menampilkan gambar dari internet
+
+Untuk menampilkan sebuah gambar dari internet di flutter kita bisa menggunakan method **Network** dengan diikuti url gambarnya sebagai parameter.
+
+```dart showLineNumbers
+Image.network('https://picsum.photos/250?image=1'),
+```
+
