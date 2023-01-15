@@ -14,7 +14,7 @@ type TagPageProps = {
 const TagPage = (props: TagPageProps) => {
   const { params } = props
   
-  if(params.tag !== 'dart' && params.tag !== 'windows'){
+  if(params.tag !== 'dart' && params.tag !== 'flutter'){
     notFound()
   }
 
