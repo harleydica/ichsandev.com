@@ -24,7 +24,7 @@ const PostCard = (props: PostCardProps) => {
     >
       
       <Image
-        src={`https://ik.imagekit.io/uvma3bkbp/${image}/?ik-sdk-version=javascript-1.4.3&updatedAt=1673611681571`}
+        src={`/static/images/${image}`}
         width={1280}
         height={720}
         alt={title}
