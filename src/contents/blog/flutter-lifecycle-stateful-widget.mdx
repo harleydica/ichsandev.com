@@ -1,0 +1,137 @@
+---
+title: Belajar Flutter - Lifecycle Stateful Widget
+date: '2023-01-15T00:00:00Z'
+modifiedTime: '2023-08-15T00:00:00Z'
+summary: Mari kita belajar cara menampilkan gambar baik dari internet maupun lokal sekaligus melakukan caching terhadap gambarnya.
+image: 'lifecycle-stateful-widget-flutter.png'
+tag: flutter
+---
+
+Menampilkan sebuah gambar merupakan hal yang dasar yang wajib kita kuasai saat membangun sebuah aplikasi, bayangkan saja sebuah aplikasi tanpa adanya visual gambar? wkwk pasti hambar. 
+
+Untuk menampilkan gambar di flutter kita bisa memanfaatkan class **Image** yang telah disediakan oleh flutter secara default guna menampilkan berbagai jenis gambar. Nantinya kita akan belajar untuk menampilkan gambar dari dua sumber yaitu dari internet dan lokal.
+
+Karena image ini membutuhkan material sebagai pembungkus style maka dari itu kita buat pembungkus style materialnya dengan widget MaterialApp.
+
+```dart showLineNumbers
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  Widget build(BuildContext context) {
+
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Menampilkan Gambar'),
+        ),
+        body: Image Ditampilkan Disini,
+      ),
+    );
+  }
+}
+```
+
+## Menampilkan gambar dari internet
+
+Untuk menampilkan sebuah gambar dari internet di flutter kita bisa menggunakan method **Network** dengan diikuti url gambarnya sebagai parameter.
+
+```dart showLineNumbers
+Image.network('https://picsum.photos/250?image=1')
+```
+
+Selain png flutter juga mendukung beberapa jenis gambar lainya seperti, JPEG, PNG, GIF, Animated GIF, WebP, Animated WebP, BMP, dan WBMP.
+
+Contoh untuk GIF
+
+```dart showLineNumbers
+Image.network('https://docs.flutter.dev/assets/images/dash/dash-fainting.gif');
+```
+
+Kita juga bisa mengatur tinggi dan lebar layaknya gambar di html menggunakan properti *width* dan *height*.
+
+```dart showLineNumbers
+Image.network(
+    'https://picsum.photos/250?image=1',
+    width: 100,
+    height: 60
+)
+```
+
+## Placeholder dan Caching
+
+Secara default method **Image.network** tidak memiliki fungsionalitas yang advance, tugas dasarnya ialah mengambil gambar dari internet lalu menampilkanya dan memanipulasikan.
+
+Method network tidak bisa melakukan caching terhadap gambar yang ingin kita tampilkan, sehingga gambar akan di download setiap kali kita membuka layer dan itu akan memakan beban kinerja aplikasi nantinya.
+
+Ada dua cara yang bisa kita terapkan guna mendapatkan kinerja gambar yang lebih cepat yaitu dengan placeholder dan caching.
+
+### Placeholder
+
+Placeholder adalah sebuah aksi yang bisa kita berikan kepada tempat dari image yang nantinya akan dijalankan saat gambar sedang didownload. Hal ini pasti sudah sering kita temukan di website-website dimana ada banyak metode untuk placeholder seperti spinner, fade, atau loading yang biasanya berbentuk gif.
+
+Untuk menerapkanya kita bisa memanfaatkan class **FadeInImage.assetNetwork**.
+
+```dart showLineNumbers
+FadeInImage.assetNetwork(
+    placeholder: 'assets/loading.gif',
+    image: 'https://picsum.photos/250?image=2',
+),
+```
+
+Hasilnya nanti akan menjadi seperti ini, gif loading akan dijalankan saat proses download gambar berlangsung dan ketika gambar sudah didownload maka gif loading akan berhenti dan gambar akan ditampilkan dengan transisi fade in.
+
+![placeholder gambar flutter](https://ik.imagekit.io/uvma3bkbp/fading-in-asset-demo_2dbljxltJ.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1673667036915 'placeholder gambar flutter')
+
+### Caching
+
+Oke selanjutnya ada caching, sebuah fitur yang sudah sangat lumrah kita dengar, disini saya nggak akan jelasin apa itu caching karena saya yakin anda semuanya udah paham kan hehe.
+
+Untuk melakukan caching gambar kita bisa menggunakan package bernama **cached_network_image** yang masih baru dirilis 2 bulanan dari artikel ini dibuat.
+
+Pertama kita install dan import terlebih dahulu packagenya.
+
+```dart
+import 'package:cached_network_image/cached_network_image.dart';
+```
+
+Selanjutnya tinggal kita pakai
+
+```dart showLineNumbers
+CachedNetworkImage(
+    imageUrl: "http://via.placeholder.com/350x150",
+    placeholder: (context, url) => CircularProgressIndicator(),
+    errorWidget: (context, url, error) => Icon(Icons.error),
+),
+```
+
+Kode di atas akan menampilkan placeholder berupa **CircularProgressIndicator** saat gambar pertama kali di download dan akan menampilkan icon error jika gambar tidak berhasil di download. Nah jika user membuka aplikasi selanjutnya maka gambar otomatis akan di tampilkan dari memori internal aplikasi (nggak di download lagi).
+
+## Menampilkan gambar dari lokal
+
+Berbeda dengan cara pengambilan gambar dari network jika kita menggunakan gambar dari lokal maka kita tidak perlua menambahkan placeholder ataupun cache karena yaa sudah pastt gambar kita akan ditampilkan secara cepat.
+
+Untuk menampilkan gambar secara lokal dengan flutter kita bisa menggunakan class **Image.asset**.
+
+```dart 
+Image.asset('assets/cat.png')
+```
+
+Semua gambar wajib diletakkan di folder asset, dengan struktur folder seperti ini.
+
+<Tree
+  data={[
+    {
+      name: 'assets',
+      children: [{ name: 'image.png' }],
+    },
+    {
+      name: 'lib',
+      children: [{ name: 'main.dart' }],
+    },
+  ]}
+/>
