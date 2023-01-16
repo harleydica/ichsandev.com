@@ -11,7 +11,7 @@ Salah satu hal yang membuat saya pusing saat belajar widget di flutter ialah bag
 
 Ada banyak istilah, aksi dan mekanisme yang dilakukan oleh flutter guna membangun sebuah widget yang stateful.
 
-Berbeda dengan stateless widget, dimana ia tidak mempunyai lifecycle yang rumit karena ia hanya di konfigurasi dan di render satu kali dan tidak boleh ada perubahan apapun saat proses runtime.
+Berbeda dengan stateless widget, dimana ia tidak mempunyai lifecycle yang rumit karena ia hanya di konfigurasi dan di render satu kali, tidak boleh ada perubahan apapun saat proses runtime dan ia akan di hancurkan ketika ada properti di dalamnya yang berubah 😭.
 
 Ada sekiranya 10 kondisi yang berjalan secara urut saat lifecycle stateful widget berlangsung, mereka adalah.
 
@@ -27,3 +27,35 @@ Ada sekiranya 10 kondisi yang berjalan secara urut saat lifecycle stateful widge
 * mounted false
 
 Itulah 10 kondisi atau lebih tepatnya method atau routine yang berjalan selama stateful widget dibuat pertama kali hingga selesai di render. Masing-masing dari kondisi yang berjalan tersebut nanti akan saya perlihatkan source code dari repo flutter nya 😁
+
+## 10 Cycles Stateful Widget
+
+Saat flutter membuat sebuah statefulwidget maka yang pertama ia lakukan adalah mengeksekusi *construtor* dari class widget kita kemudian memanggil method `createState()` setelahnya lifecycle dari statefulwidget dimulai.
+
+<Callout>Perlu diingat bahwa constructor dari widget tidak termasuk ke dalam lifecycle, karena saat constructor dijalankan object state belum diinisialisasi</Callout>
+
+Oke mari kita bahas satu persatu.
+
+### createState()
+
+Method ini akan dijalankan pertama kali setelah object dari widget dibuat. Method ini *override* dari class *StatefulWidget* dimana ia akan mengembalikan state object.
+
+```dart showLineNumbers
+class MyApp extends StatefulWidget {
+
+  MyApp(){
+    print('object my app jalan');
+  }
+  
+  @override
+  _MyAppState createState(){
+    print('method createState() jalan');
+    print('object state untuk widget MyApp sudah dibuat');
+    return _MyAppState();
+  }
+}
+```
+
+
+
+
