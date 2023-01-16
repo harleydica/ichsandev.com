@@ -55,6 +55,26 @@ class MyApp extends StatefulWidget {
   }
 }
 ```
+### mounted === true
+
+Setelah kita membuat objek State, flutter akan mengaitkan objek State bersamaan BuildContext dengan menyetel properti boolean yang disebut mount ke true.
+
+Properti memberikan kepada kita informasi apakah state objek sudah berada di widget tree atau belum.
+
+### initState()
+
+Saat state objek sudah berhasil masuk ke widget tree (mounted properti sudah menjadi true), maka selanjutnya method initState akan dijalankan hanya satu kali.
+
+Biasanya di dalam initState kita melakukan fetch api atau melakukan pengambilan data, yaa intinya di dalam ini kita bisa memastikan bahwa data yang akan di tampilkan di widget sudah tersedia.
+
+```dart showLineNumbers
+@override
+void initState() {
+  // fetch api atau sebagainya
+}
+```
+
+### didChangeDepedencies()
 
 
 
