@@ -1,0 +1,79 @@
+---
+title: Belajar Flutter - BuildContext
+date: '2023-01-20T00:00:00Z'
+modifiedTime: '2023-01-20T00:00:00Z'
+summary: BuildContext? apa itu, mari kita bahas bersama-sama
+image: 'flutter-buildcontext.png'
+tag: flutter
+---
+
+Pernahkah anda mengalami error yang berbunyi ***Could not open /dev/vmmon: No such file or directory. Please make sure that the kernel module vmmon is loaded*** saat menginstall VMware pertama kalinya? Jika pernah atau sedang mengalaminya yapp anda berada di artikel yang tepat 😊
+
+Di artikel ini saya akan membahas bagaimana cara mengatasi error tersebut, so letss go.
+
+## Reinstall VMware
+
+Yang pertama kita lakukan sebaiknya ialah reinstall VMware yaitu kita uninstall semua file yang berkaitan dengan VMware kemudian kita install lagi, untuk melakukan ini kita bisa menjalankan perintah di bawah ini.
+
+```bash
+sudo vmware-installer vmware-player
+```
+
+Install GCC compiler untuk semua tool kompilasi VMware nantinya, biasanya ini sudah terinstall secara default untuk ilnux based OS.
+
+```bash
+sudo apt install build-essential gcc
+```
+
+Install GTK GUI module.
+
+```bash
+sudo apt install libcanberra-gtk-module
+```
+
+Oke sampai saat ini VMware sudah berhasil dihapus dan GTK libcanberra sudah terinstall, dengan begitu VMware sudah bersih dan kita siap untuk melakukan installasi ulang.
+
+## Install Ulang VMware
+
+Install VMware bundle untuk linux [disini](https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1700&productId=1377&rPId=97014)
+
+Oke setelah VMware nya di download kita bisa mengubah permission file tersebut agar bisa kita eksekusi secara langsung.
+
+```bash
+chmod +x VMware-Player-Full-*.x86_64.bundle
+```
+
+Jalankan instalasi dengan menjalankan file bundle tersebut, sesuaikan nama file nya oke.
+
+```bash
+sudo ./VMware-Player-15.0.2-10952284.x86_64.bundle
+```
+
+## Update MOK Key File
+
+Selanjutnya untuk mengupdate file MOK key kita harus menjalankan beberapa script shell, pastikan saat menjalankan script ini anda sedang berperan sebagai root user.
+
+```bash
+ wget https://raw.githubusercontent.com/rune1979/ubuntu-vmmon-vmware-bash/master/wm_autoupdate_key.sh
+ ```
+ 
+ Ubah permission file script tersebut agar bisa kita eksekusi.
+ 
+ ```bash
+ sudo chmod +x wm_autoupdate_key.sh 
+ ```
+ 
+ Jalankan script nya.
+ 
+ ```bash
+ ./wm_autoupdate_key.sh 
+ ```
+ 
+Jika semuanya berjalan dengan baik maka anda akan disuruh untuk melakukan reboot, lakukan reboot langsung dari cli jangan melalui interface GUI.
+ 
+ ```bash
+ reboot
+ ```
+
+
+
