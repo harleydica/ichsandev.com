@@ -51,5 +51,29 @@ sudo ./VMware-Player-15.0.2-10952284.x86_64.bundle
 
 ## Update MOK Key File
 
+Selanjutnya untuk mengupdate file MOK key kita harus menjalankan beberapa script shell, pastikan saat menjalankan script ini anda sedang berperan sebagai root user.
+
+```bash
+ wget https://raw.githubusercontent.com/rune1979/ubuntu-vmmon-vmware-bash/master/wm_autoupdate_key.sh
+ ```
+ 
+ Ubah permission file script tersebut agar bisa kita eksekusi.
+ 
+ ```bash
+ sudo chmod +x wm_autoupdate_key.sh 
+ ```
+ 
+ Jalankan script nya.
+ 
+ ```bash
+ ./wm_autoupdate_key.sh 
+ ```
+ 
+Jika semuanya berjalan dengan baik maka anda akan disuruh untuk melakukan reboot, lakukan reboot langsung dari cli jangan melalui interface GUI.
+ 
+ ```bash
+ reboot
+ ```
+
 
 
