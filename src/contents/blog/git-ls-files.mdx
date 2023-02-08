@@ -9,3 +9,29 @@ tag: git
 
 Sebelumnya kita sudah mengetahui bahwa git memiliki sebuah area dimana ia digunakan untuk menyimpan perubahan sementara pada file, yaitu **stage area**.
 
+Sebuah stage area sebenarnya hanyalah file index, dan ia berisikan binary yang di dalamnya berikan informasi mengenai file yang sebelumnya kita masukkan ke stage area tersebut menggunakan command git add.
+
+Isi dari file index atau stage area tidak bisa kita lihat secara langsung baik menggunakan tool parser apapun, nah untuk melihat isi dari konten di dalam stage area kita bisa menggunakan command bawaan yaitu `git ls-files`.
+
+Oke contoh disini saya mempunyai struktur direktori seperti ini.
+
+<Tree
+  data={[
+    {
+      name: 'example.txt',
+    },
+    {
+      name: '.git',
+      children: [{ name: '...' }],
+    },
+  ]}
+/>
+
+Dimana file *example.txt* tersebut belum kita masukkan ke stage area dengan command git add, maka jika kita lihat ke dalam folder .git kita tidak akan menemukan file index di dalamnya.
+
+Oke sekarang kita masukkan file example.txt ke stage area, dan dengan begitu file index akan terbuat.
+
+
+
+
+
