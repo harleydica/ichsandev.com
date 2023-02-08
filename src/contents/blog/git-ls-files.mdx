@@ -57,17 +57,36 @@ Command git ls-files memiliki beberapa flag yang bisa kita gunakan untuk mengeta
 Contohnya untuk flag --stage atau -s ia digunakan untuk memberitahu kepada kita file apa saja sih yang sudah masuk ke stage area, atau istilah kata file yang sudah kita git add.
 
 ```bash
-ichsan@ichsan:~/tes$ git status
-On branch master
-
-No commits yet
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	example.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
+> git ls-files --stage
+100644 1185b465e5d77cbaf348effaf07b801e63998d17 0	example.txt
 ```
+2 flag lagi yang menarik untuk kita gunakan ialah `--deleted` dan `--modified`.
+
+`--deleted` digunakan untuk melihat file apa yang telah di hapus di working directory tetapi state penghapusan tersebut belum kita masukkan ke stage area. Contohnya kita sudah memasukkan file example.txt ke stage area, lalu kita menghapusnya di working area tetapi penghapusan tersebut belum kita add.
+
+Mungkin anda akan lebih paham dengan beberapa perintah di bawah ini.
+
+```bash
+> git add example.txt 
+> git ls-files
+example.txt
+> rm example.txt
+> git ls-files --deleted
+example.txt
+> git rm example.txt
+rm 'example.txt'
+> git ls-files --deleted
+> git ls-files
+> 
+```
+
+Bisa kita lihat di atas bahwa flag --deleted akan menampilkan filenya ketika sebuah file yang telah masuk ke stage area telah dihapus di working area **tetapi** state penghapusanya belum kita tambahkan ke stage area.
+
+Kita bisa menggunakan command `git rm example.txt` untuk menambahkan state penghapusan kita ke stage area, dimana yang kita tambahkan ini bukanlah membuat object baru atau apa itu. Ketika kita menjalankan `git rm` maka file yang sebelumnya sudah ada di object tetap akan ada dan nama path file beserta nama file objectnya lah yang akan terhapus dari index.
+
+Maka dari itulah ketika kita menjalankan command `git ls-files` lagi setelah `git rm example.txt` file example.txt tidak ada karena ia sudah dihapus dari file index.
+
+
 
 
 
