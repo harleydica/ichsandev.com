@@ -19,6 +19,50 @@ Git mengadaptasi sebuah pendekatan dengan menggunakan branch, dimana ini bisa ki
 
 Dari gambar di atas kita mengetahui ada 3 branch, yaitu branch1, branch2 dan master. Dimana branch master inilah branch utama yang digunakan, dan branch master inilah yang biasanya digunakan untuk auto deploy runner github yaa intinya projek aplikasi kita ada di branch ini 😄
 
-Kita bisa menambah branch sesuka 
+Kita bisa menambah branch sesuka hati kita karena branch disini biasanya digunakan untuk meingsolasikan pekerjaan untuk setiap **orang** atau **fitur** tertentu.
+
+## Less go to branch
+
+Oke mari kita masuk ke prakteknya, disini saya sudah menyiapkan repositori kosong dengan 3 file yang berbeda.
+
+<Tree
+  data={[
+    {
+      name: 'a.txt',
+    },
+    {
+      name: 'b.txt',
+    },
+    {
+      name: 'c.txt',
+    },
+    {
+      name: '.git',
+      children: [{ name: '...' }],
+    },
+  ]}
+/>
+
+Cek kita sedang berada di branch apa dengan command `git branch`.
+
+```bash
+PS C:\tes> git branch
+
+```
+
+Hasilnya ialah kosong, loh mengapa? yap karena kita belum melakukan commit apapun. Silahkan masukkan ketiga file tersebut ke dalam stage area dan commit mereka. Setelah anda commit maka anda akan dibuatkan oleh git default sebuah branch bernama **master**.
+
+Oke cek lagi anda sedang berada di branch apa, simbol bintang menandakan posisi branch anda sekarang.
+
+```bash
+PS C:\tes> git branch
+*master
+```
+
+
+
+
+
+
 
 
